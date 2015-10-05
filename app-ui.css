@@ -1,0 +1,711 @@
+@-ms-viewport       { width: device-width; }
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+.container, .container-fluid, .row, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+body {
+	font-family: Arial, "Microsoft YaHei", Helvetica, "Helvetica Neue", sans-serif;
+	background-color: #EEEEEE;
+	/*background-image: url(../images/bg.jpg);*/
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-color: #8C8C8C;
+	/*padding-top: 48px;*/
+	/*禁止BODY 选择 */
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	zoom: 1;
+	height: 640px;
+	/*-ms-zoom: 0.57;
+	 -webkit-zoom: 0.57;
+	 -moz-transform:  scale(0.57);*/
+	/*-moz-transform-origin: left center;*/
+	overflow: hidden;
+	position: relative;
+}
+
+/*消除button，selcet等控件选中时的虚线框*/
+input, button, a {
+	outline: 0 none !important;
+}
+
+i {
+	vertical-align: middle;
+}
+/*
+ ::-webkit-scrollbar {
+ width: 10px;
+ }
+
+ ::-webkit-scrollbar-thumb {
+ background: #888;
+ }
+
+ ::-webkit-scrollbar-track {
+ background: #ddd;
+ }*/
+/*想高度100%父元素需有设置为height: 100%;*/
+html[data-status=logged-in], html[data-status=logged-in] body, html[data-status=logged-in] .height-viewport {
+	min-height: 100%;
+	height: 100%;
+}
+html[data-status=logged-in], html[data-status=logged-in] body {
+	overflow: hidden;
+}
+
+/*body:before {*/
+/*content: "";*/
+/*position: absolute;*/
+/*background-image: url(../images/sfsdafasfwg.jpg) ;*/
+/*background: #eee url(../images/d60ff2c5a4244d6db8e74b5f83a23688.jpg) no-repeat center center;*/
+/*background-size: cover;*/
+/*z-index: -1; /* Keep the background behind the content */
+/*height: 100%; width:100%; /* Using Glen Maddern's trick /via @mente */
+
+/* don't forget to use the prefixes you need */
+/*transform: scale(10);*/
+/*transform-origin: top left;*/
+/*-webkit-filter:blur(5px);*/
+/*}*/
+/*
+ .app-nav-bar {
+ background-color: rgba(0, 0, 0, 0.8);
+ background: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,0.4));
+ margin-bottom: 0px;
+ height: 48px;
+ min-height: 48px;
+ max-height: 48px;
+ color: #fff;
+ z-index: 1030;
+ position: fixed;
+ right: 0;
+ left: 0;
+ z-index: 1030;
+ top: 0;
+ }*/
+
+#app-header {
+	padding-right: 18px;
+	min-height: 50px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	position: fixed;
+	right: 0;
+	left: 0;
+	z-index: 1030;
+	top: 0;
+	border-width: 0 0 1px;
+	background-color: rgba(35,35,35,.96);
+	border: 0;
+	height: 48px;
+	min-height: 48px;
+	opacity: 0.9;
+}
+.app-brand {
+	font-size: 20px !important;
+	color: white !important;
+}
+
+/*.navbar-nav > li > a {padding-top:5px !important; padding-bottom:5px !important;}*/
+/*.navbar {min-height:48px !important;}*/
+
+.app-header-nav {
+	padding: 0;
+	padding-top: 6px;
+	position: absolute;
+	right: 0;
+	margin-right: 16px;
+}
+.app-header-nav > li {
+	list-style: none;
+	float: left;
+}
+
+.app-header-nav > li > a {
+	padding: 10px;
+	text-decoration: none;
+	line-height: 20px;
+	display: inline-block;
+	color: #f4f5f0;
+}
+.app-header-nav > li > .user-panel {
+	padding: 10px;
+}
+.app-header-nav-text {
+	float: left;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-top: 17px;
+	margin-left: 4px;
+}
+.app-header-option > li > a {
+	padding: 10px 8px;
+}
+
+.text-yellow {
+	color: #f4c345 !important;
+}
+.bold {
+	font-weight: bold !important;
+}
+
+.login-container {
+	width: 400px;
+	margin: 70px 10px 0px auto;
+	background-color: #FFF;
+	border-radius: 8px;
+	max-height: 626px;
+	box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.376);
+	position: relative;
+}
+
+@media screen and (max-width: 767px) {
+	.login-container {
+		margin: 70px auto auto auto !important;
+		float: none;
+	}
+}
+
+.app-container {
+	margin: 0 auto;
+	height: 700px;
+	max-width: 1018px;
+	opacity: 0.9;
+}
+
+.func-key {
+	position: absolute;
+	top: 2px;
+	left: 4px;
+	font-weight: bold;
+	font-size: 10px !important;
+	color: #FFF;
+	/*text-shadow:1px 1px 2px #000;*/
+}
+.func-key-right {
+	left: auto;
+	right: 4px;
+}
+
+@media screen and (max-width: 970px) {
+	.func-key {
+		display: none;
+	}
+
+}
+
+/*.app-container-left .functions .func-key {
+ top: 2px;
+ left: 4px;
+ }*/
+.app-container-left .functions {
+	margin: 8px 10px;
+	height: 46px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+}
+
+.app-container-left .functions [class^=col-] {
+	padding-left: 2px;
+	padding-right: 2px;
+	height: 100%;
+}
+
+/*.app-container-left button, .app-container-left .btnX, .app-container-right button, .app-container-right .btnX {*/
+.btnX {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #fff;
+	float: left;
+	position: relative;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	border: 0;
+	border-radius: 4px;
+	color: #000;
+	white-space: normal;
+	box-shadow: 0px 1px 1px rgba(0,0,0,.2), 0px 2px 3px rgba(0,0,0,.1);
+	display: inline-block;
+	font-size: 100%; /*13px*/;
+	font-weight: bold;
+	padding: 5px 15px 7px;
+	text-decoration: none;
+}
+
+#options .left-func button, #options .left-func .btnX {
+	background-color: #A5C536;
+}
+#options .btnX {
+	height: 50px;
+	margin-bottom: 8px;
+}
+
+.app-container-left .functions button {
+	padding: 5px;
+	background-color: #A5C536;
+}
+.app-container-left .functions button:active {
+	background-color: rgba(138,165,45,1 );
+	/*width: 100%;*/
+}
+
+.functions .fa {
+	font-size: 18px;
+}
+
+.shoppingcart-list {
+	border-radius: 6px;
+	/*box-shadow: 0px 1px 1px rgba(0,0,0,.3), 0px 2px 3px rgba(0,0,0,.2);*/
+	/*box-shadow: 0 1px 2px rgba(0,0,0,.1);*/
+	box-shadow: 0px 1px 1px rgba(0,0,0,.1), 0px 2px 5px rgba(0,0,0,.1);
+	/*box-shadow: 0px 3px 16px rgba(0,0,0,.2);*/
+	margin: 0px 10px;
+	/*background: linear-gradient(-135deg, rgba(0, 0, 0, 0) 1.8em, white 0%);*/
+	max-height: 520px;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 64px;
+	bottom: 0px;
+	overflow: hidden;
+}
+
+.shoppingcart-list-header {
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 53px;
+	border-radius: 6px 6px 0 0;
+	overflow: hidden;
+	background: linear-gradient(-135deg, rgba(0, 0, 0, 0) 1.97em, white 0%);
+	/*background: linear-gradient(-135deg, rgba(0, 0, 0, 0) 1.8em, white 0%);*/
+	/*border-bottom: 1px solid rgba(204, 204, 204, 0.5);*/
+	box-shadow: 0 2px 10px -6px rgba(0,0,0,0.3);
+}
+
+.shoppingcart-list-header .add-customer {
+	position: relative;
+	font-size: 20px;
+	height: 100%;
+	line-height: 53px;
+	text-align: center;
+	/*How can I show dots (“…”) in a span with hidden overflow?*/
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden !important;
+	text-overflow: ellipsis;
+	background-color: rgb(179, 179, 179);
+	color: white;
+}
+/*
+ .shoppingcart-list-header .customer-info {
+ height: 100%;
+ line-height: 53px;
+ }
+ .shoppingcart-list-header .customer-name, .shoppingcart-list-header .customer-store, .shoppingcart-list-header .customer-reward {
+ height: 100%;
+ line-height: 53px;
+ }*/
+
+.shoppingcart-list-header .customer-info {
+	position: relative;
+	font-size: 14px;
+	font-weight: bold;
+	height: 53px;
+	color: black;
+	/*color: #969696;*/
+	text-align: center;
+	/*How can I show dots (“…”) in a span with hidden overflow?*/
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden !important;
+	text-overflow: ellipsis;
+	/*如果用在 span 上，記得多加一行 display : inline-block */
+}
+.customer-info div:not(:first-child) {
+	border-left: 1px solid rgba(241, 241, 241, 0.86);
+	/*如果用在 span 上，記得多加一行 display : inline-block */
+}
+.customer-info .func-key {
+	color: #ccc !important;
+	display: block !important;
+	font-size: 8px !important;
+	font-weight: 300;
+}
+
+.customer-info .value {
+	text-transform: capitalize;
+	line-height: 53px;
+	height: 53px;
+}
+
+.customer-info div:not(:first-child) .value {
+	float: right;
+	padding-top: 4px !important;
+	padding-right: 4px !important;
+}
+
+.shoppingcart-list-header .load-recent-sales {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: linear-gradient(to right top, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.2)) 100% 0 no-repeat;
+	/*width: 2.54558em;
+	 height: 2.54558em;*/
+	width: 2.85em;
+	height: 2.85em;
+	transform: translateY(0.0em) rotate(0deg);
+	transform-origin: bottom right;
+	border-bottom-left-radius: 6px;
+	border-top-right-radius: 6px;
+	box-shadow: -0.2em 0.2em 1.3em -0.1em rgba(0, 0, 0, 0.15);
+}
+
+.shoppingcart-list-body {
+	overflow-x: hidden;
+	overflow-y: auto;
+	/*max-height: 650px;*/
+	position: absolute; /*使用绝对定位来实现自适应*/
+	top: 52px;
+	left: 0;
+	right: 0;
+	bottom: 50px;
+	/*bottom: 158px;*/
+	margin: 0px 0px;
+	background: rgba(239, 239, 239, 1);
+	/*background: rgba(225, 225, 225, 1);*/
+	/*padding-top: 20px;*/
+}
+.shoppingcart-list-body .product-row {
+	padding: 8px 20px;
+	color: rgba(107,107,107,1);
+	font-size: 14px;
+	box-shadow: 0 2px 10px -6px rgba(0,0,0,0.3);
+	background: rgba(255, 255, 255, 1);
+}
+@media screen and (max-width: 992px) {
+	.shoppingcart-list-body .product-row {
+		padding: 8px 20px 24px 20px;
+	}
+}
+.shoppingcart-list-body .product-row:nth-child(odd) {
+	background: rgba(245, 245, 245, 1);
+}
+
+.shoppingcart-list-body .basic_info, .shoppingcart-list-body .subtotal {
+	font-weight: bold;
+}
+.shoppingcart-list-body .edit{
+	font-weight: bold;
+	color: rgba(244,162,69,1);
+}
+.shoppingcart-list-body .descripcion, .shoppingcart-list-body .product-quantity {
+	font-size: 14px;
+	color: #999;
+}
+.shoppingcart-list-body .product-subtotal {
+	font-size: 14px;
+	/*font-weight: bold;*/
+}
+
+.shoppingcart-list-body .select {
+	background: rgb(98, 151, 214) !important;
+	/*background: rgba(125,167,217,1) !important;*/
+	/*color: white;	*/
+}
+.shoppingcart-list-body  .select .basic_info, .shoppingcart-list-body .select .subtotal {
+	color: white;
+}
+.shoppingcart-list-body  .select .descripcion, .shoppingcart-list-body  .select .product-quantity {
+	color: #E7E7E7;
+}
+.shoppingcart-list-body  .select .edit {
+	color: rgba(244, 195, 69, 1);
+}
+
+.shoppingcart-list-footer {
+	/*border-top: 1px solid #e2e2e2;*/
+	color: rgb(111, 111, 111);
+	/*margin: 12px 3px;*/
+	height: 50px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0px;
+	/*border-top: 1px solid rgba(204, 204, 204, 0.5);*/
+	/*box-shadow: 0 -1px 15px -8px rgba(0,0,0,0.3);*/
+}
+.shoppingcart-list-footer [class^=col-] {
+	height: 100%;
+}
+.shoppingcart-list-footer .btnX {
+	background-color: rgba(244, 162, 69, 1);
+	height: 100%;
+	color: black;
+	border: 1px #DE953D solid;
+	border-radius: 0px;
+}
+.shoppingcart-list-footer .btnX.updown {
+	background-color: rgb(250, 252, 253);
+	border: 1px #F1F2F3 solid;
+}
+.shoppingcart-list-footer .btnX.tax {
+	background-color: rgb(247, 148, 3);
+	border: 1px #DC8802 solid;
+	color: white;
+}
+.shoppingcart-list-footer .btnX.return {
+	background-color: rgb(247, 148, 3);
+	border: 1px #DC8802 solid;
+	color: white;
+}
+.shoppingcart-list-footer .btnX.delete {
+	background-color: rgb(255,68,1);
+	border: 1px #D24405 solid;
+	color: white;
+}
+.shoppingcart-list-footer .btnX.restore {
+	background-color: rgb(255,68,1);
+	border: 0px #822902 solid;
+	color: white;
+}
+@media screen and (max-width: 992px) {
+
+	.shoppingcart-list-footer .btnX.tax, .shoppingcart-list-footer .btnX.return {
+		background-color: rgb(250, 252, 253);
+		border: 1px #F1F2F3 solid;
+		color: black;
+	}
+
+	.shoppingcart-list-footer .btnX.restore {
+		background-color: rgb(247, 148, 3);
+		border: 1px #DC8802 solid;
+		color: white;
+	}
+}
+
+.app-func-left {
+	margin-bottom: 10px;
+	padding-top: 5;
+	background-color: yellow;
+}
+
+.app-func-right {
+	margin-bottom: 10px;
+}
+
+/*GO TO RIGHT*/
+.btn-go-right {
+	float: left;
+	position: relative;
+	height: 46px;
+	margin: 0;
+	padding: 0;
+	/*margin-left: 4px;*/
+	/*margin-right: 4px;*/
+	overflow: hidden;
+	text-overflow: ellipsis;
+	border: 0;
+	border-radius: 4px;
+	color: #232323;
+	background-color: #CDCDCC;
+	border-color: #CDCDCC;
+	white-space: normal;
+	box-shadow: 0px 2px 1.5px #969696;
+}
+
+.btn-go-right:hover {
+	color: #FFF;
+	background-color: #ACADAB;
+	border-color: #ACADAB;
+	/*width: 100%;*/
+}
+
+.app-container-right .func-key {
+	color: rgba(0,0,0,.3);
+}
+.app-container-right .functions {
+	margin: 8px 10px;
+	height: 46px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+}
+
+.app-container-right .functions [class^=col-], .app-container-right .functions .row {
+	height: 100%;
+}
+.app-container-right .functions .btn-wrapper {
+	padding-left: 2px;
+	padding-right: 2px;
+	height: 100%;
+}
+
+.app-container-right .functions  button {
+	padding: 5px;
+	background-color: rgba(244,195,69,1);
+}
+
+.app-container-right .functions button:active {
+	background-color: rgba(242,183,30,1);
+}
+
+.col-right-panel {
+	margin: 0px 0px;
+	/*background-color: white;*/
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 64px;
+	bottom: 0px;
+}
+
+.scan-tab-content .toolbarpane {
+	position: relative;
+	/*background-color: rgba(125,167,217,1);*/
+	background-color: rgb(98, 151, 214);
+	background-size: cover;
+	color: white;
+	height: 184px;
+	margin: 0px 10px;
+	padding: 5px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	overflow: hidden;
+}
+.scan-tab-content .toolbarpane .btnaction {
+	font-size: 12px;
+	font-weight: bold;
+	height: 38px;
+	padding: 5px 15px 7px;
+}
+.scan-tab-content .toolbarpane .textaction {
+	position: relative;
+	float: left;
+	font-size: 1em;
+	padding: 10px;
+	line-height: 23px;
+}
+.scan-tab-content .toolbarpane .btn-undo-func-key {
+	position: absolute;
+	top: 2px;
+	left: 4px;
+	font-weight: bold;
+	font-size: 12px !important;
+	color: #c7c7c7;
+}
+
+.scan-tab-content .keyboard {
+	margin: 0px 10px;
+	height: 100%;
+	max-height: 336px;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	overflow: hidden;
+}
+
+.scan-tab-content .keyboard[class^=col-] {
+	height: 100%;
+}
+.scan-tab-content .keyboard .wrapper {
+	height: 48px;
+	width: 100%;
+}
+
+.scan-tab-content .keyboard .Scan_tab_input {
+	font-size: 29px;
+	font-weight: normal;
+	float: right;
+	line-height: 54px;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+.scan-tab-content .keyboard .left-func .wrapper {
+	padding-left: 0px;
+}
+
+.scan-tab-content .keyboard .btnX {
+	font-size: 13px;
+	/* font-weight: bold; */
+	padding: 5px 15px 7px;
+	border-radius: 0px;
+	border: 1px rgba(0,0,0, 0.2) solid;
+	box-shadow: auto;
+}
+
+.scan-tab-content .payment .btnX {
+	height: 48px;
+	background-color: #A6C649;
+	color: rgb(43, 58, 0);
+	font-size: 16px;
+}
+
+.scan-tab-content .left-func button {
+	text-transform: capitalize;
+	white-space: nowrap;
+	text-align: left;
+	font-size: 14px;
+	background-color: rgba(183,226, 243, 1);
+	color: rgba(0, 0, 0, 1);
+}
+.scan-tab-content .keyboard .left-func button:active {
+	background-color: rgba(148,212, 237, 1);
+}
+
+.bg-gray {
+	background-color: rgba(210, 210, 210, 1) !important;
+}
+
+.modal-dialog {
+	/*position: relative;*/
+	width: auto;
+	max-width: 700px;
+}
+
+.navbar {
+	min-height: auto;
+}
+.navbar-collapse.collapse {
+	display: block !important;
+}
+
+.navbar-nav > li, .navbar-nav {
+	float: left !important;
+}
+.navbar-nav {
+	margin: 0px;
+}
+/*
+ .navbar-nav.navbar-right:last-child {
+ margin-right: -15px !important;
+ }*/
