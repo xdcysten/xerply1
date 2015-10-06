@@ -1,9 +1,9 @@
 @font-face {
 	font-family: 'icomoon';
-	src:url('../fonts/icomoon.woff') format('woff') ;
-	src:url('../fonts/icomoon.eot?#iefix-vm9nji') format('embedded-opentype'),
+	src:url('http://xdcysten.vicp.cc/xerply/fonts/icomoon.woff') format('woff') ;
+	src:url('http://xdcysten.vicp.cc/xerply/fonts/icomoon.eot?#iefix-vm9nji') format('embedded-opentype'),
 		/*url('fonts/icomoon.ttf?-vm9nji') format('truetype'),*/
-		url('../fonts/icomoon.woff') format('woff') ;
+		url('http://xdcysten.vicp.cc/xerply/fonts/icomoon.woff') format('woff') ;
 		/*?-vm9nji'*/
 		/*url('fonts/icomoon.svg?-vm9nji#icomoon') format('svg');*/
 	font-weight: normal;
