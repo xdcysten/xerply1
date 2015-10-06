@@ -1,5 +1,70 @@
-//////////////////////////////////////////////
-// Obfuscated by Javascript Obfuscator 4.3  //
-// http://javascript-source.com             //
-//////////////////////////////////////////////
-eval((function(x){var d="";var p=0;while(p<x.length){if(x.charAt(p)!="`")d+=x.charAt(p++);else{var l=x.charCodeAt(p+3)-28;if(l>4)d+=d.substr(d.length-x.charCodeAt(p+1)*96-x.charCodeAt(p+2)+3104-l,l);else d+="`";p+=4}}return d})("$(document).ready(function () {$(\".login_screen\").on(\"touchstart mousedown\", \"button,.btnX\", ` a&e) {e.preventDefault();_` p((this, e);});` R%` 5*o, e) {var sType = e.type;` .!Keys;if (` 6#= `!`'\" ||` N$` 1$end` (+`\"&&` %/up\"`!s2e.stopImmediatePropagation()`!U\"Click = o.nam`!h#Evener =` 7#;_SoundPlayX(` &!Touch);} else `\"+*keypress`!L\"`!$7if (e.ctrlKey || e.altKey) {return false;}`!c\"har = String.fromCharCode(e.which` m\"/^[a-zA-Z0-9!@#$%^&*()_+-=[\\]\\\\,./{}|<>?'\\\"]$/.test(` x!)) {` [\"=` '-`#H/`\"|*\"+\"`\"g$`%@\"`#9'har;}}` (2`!t#;}`#@!` /$= \"8\" &&`$}'key`%4&`$N#= \"backspace`%*3_B` 9$(`$C)`\"QQ`!Y\"`\"Y3_SetValue` ?%`%S)`\"0'32\") {` &313`\"3,enter\") {_` %!(\"1\");}`)?&`\"7'`*m(input\").val(\"` D*`!a%`)l$$oInput = ` O-;` 5#` c!` A#` '!) +`*o!` m&`!Y\"e`,)2css(\"display\", \"none\");$(\".app-container-left,` %+right` R/block\"`$w+`)]-Error);}}});"))
+$(document).ready(function() {
+
+	$(".login_screen").on("touchstart mousedown", "button,.btnX", function(e) {
+		e.preventDefault();
+		_login_screen(this, e);
+	});
+
+	function _login_screen(o, e) {
+		var sType = e.type;
+		var sKeys;
+
+		if (sType == "touchstart" || sType == "touchend" || sType == "mousedown" || sType == "mouseup") {
+			e.preventDefault();
+			e.stopImmediatePropagation();
+			var sClick = o.name;
+			var sEvener = sClick;
+			_SoundPlayX(SoundTouch);
+		} else if (sType == "keypress") {
+			e.stopImmediatePropagation();
+			if (e.ctrlKey || e.altKey) {
+				return false;
+			}
+			var sChar = String.fromCharCode(e.which);
+			if (/^[a-zA-Z0-9!@#$%^&*()_+-=[\]\\,./{}|<>?'\"]$/.test(sChar)) {
+				if (/^=$/.test(sChar)) {
+					e.preventDefault();
+					var sEvener = "+";
+				} else {
+					var sEvener = sChar;
+				}
+			}
+		} else {
+			// var sKeys = e.data.keys;
+			var sEvener = e.which;
+		}
+
+		if ((sEvener == "8" && sType == "keydown") || sClick == "backspace") {
+			e.preventDefault();
+			_Backspace()
+		} else if (/^[a-zA-Z0-9!@#$%^&*()_+-=[\]\\,./{}|<>?'\"]$/.test(sEvener)) {
+			e.preventDefault();
+			_SetValue(sEvener);
+
+		} else if (sEvener == "32") {
+
+		} else if (sEvener == "13" || sClick == "enter") {
+			_enter("1")
+		}
+
+		function _Backspace() {
+			$(".login_input").val("");
+		}
+
+		function _SetValue(e) {
+			var $oInput = $(".login_input");
+			$oInput.val($oInput.val() + e);
+		}
+
+		function _enter(e) {
+			$(".login_screen").css("display", "none");
+			$(".app-container-left,.app-container-right").css("display", "block");
+			_Backspace()
+
+			_SoundPlayX(SoundError);
+			// _SoundPlayX(SoundScan);
+		}
+
+	}//_login_screen
+
+}); 
